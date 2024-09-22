@@ -65,8 +65,8 @@ public class ClientCustomContext {
                 System.out.println("----------------------------------------");
                 System.out.println(httpget + "->" + new StatusLine(response));
                 final List<Cookie> cookies = cookieStore.getCookies();
-                for (int i = 0; i < cookies.size(); i++) {
-                    System.out.println("Local cookie: " + cookies.get(i));
+                for (final Cookie element : cookies) {
+                    System.out.println("Local cookie: " + element);
                 }
                 EntityUtils.consume(response.getEntity());
                 return null;
